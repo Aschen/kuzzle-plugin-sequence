@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "npm run build",
     "build": "node bin/build.js",
-    "test": "npm run --silent lint && npm run unit-testing",
+    "test": "npm run --silent lint && npm run unit-testing && npm run functional-testing",
     "lint": "eslint --max-warnings=0 ./lib",
     "unit-testing": "./node_modules/.bin/mocha test/",
     "functional-testing": "./node_modules/.bin/cucumber-js"
@@ -38,6 +38,7 @@
     "rewire": "^4.0.1",
     "should-sinon": "0.0.6",
     "sinon": "^7.2.3",
+    "kuzzle-sdk": "^6.1.1",
     "should": "^13.2.3"
   },
   "dependencies": {
@@ -46,8 +47,6 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.4",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
     "semver": "^6.0.0",
     "uuid": "^3.3.2"
   }
