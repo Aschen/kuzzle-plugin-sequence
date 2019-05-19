@@ -1,0 +1,54 @@
+{
+  "name": "kuzzle-plugin-sequence",
+  "author": "Aschen <adrien@maret.email",
+  "version": "1.0.0",
+  "description": "Emulation of a transaction-like system with database action sequences",
+  "main": "lib/index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "node bin/build.js",
+    "test": "npm run --silent lint && npm run unit-testing",
+    "lint": "eslint --max-warnings=0 ./lib",
+    "unit-testing": "./node_modules/.bin/mocha test/",
+    "functional-testing": "./node_modules/.bin/cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aschen/kuzzle-plugin-sequence.git"
+  },
+  "keywords": [
+    "kuzzle",
+    "plugin",
+    "s3",
+    "aws",
+    "upload"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/aschen/kuzzle-plugin-sequence/issues"
+  },
+  "homepage": "https://github.com/aschen/kuzzle-plugin-sequence#readme",
+  "devDependencies": {
+    "cucumber": "^5.1.0",
+    "eslint": "^5.13.0",
+    "kuzzle-common-objects": "^3.0.13",
+    "mocha": "^5.2.0",
+    "mock-require": "^3.0.3",
+    "nyc": "^13.2.0",
+    "rewire": "^4.0.1",
+    "should-sinon": "0.0.6",
+    "sinon": "^7.2.3",
+    "should": "^13.2.3"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime": "^7.4.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "semver": "^6.0.0",
+    "uuid": "^3.3.2"
+  }
+}
